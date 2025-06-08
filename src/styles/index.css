@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  background-color: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: inherit;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+}
+
+/* Modo Claro */
+.light-mode {
+  background-color: #fff0f7;
+  color: #333;
+}
+
+.light-mode .tech-card,
+.light-mode .gallery img {
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.light-mode .btn.normal,
+.light-mode .tech-btn {
+  background-color: #ffe3f0;
+  color: #5a2c75;
+}
+
+.light-mode .btn.normal:hover,
+.light-mode .tech-btn:hover {
+  background-color: #f9c8e2;
+  transform: scale(1.05);
+}
+
+/* Modo Oscuro */
+.dark-mode,
+.dark-mode html,
+.dark-mode body,
+.dark-mode #root,
+.dark-mode .technologias-container {
+  background-color: #1a1a1a !important;
+  color: #f8f8f8;
+}
+
+.dark-mode .tech-card,
+.dark-mode .gallery img {
+  background-color: #2a2a2a;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .btn.normal,
+.dark-mode .tech-btn {
+  background-color: #5a2c75;
+  color: #fff0f7;
+}
+
+.dark-mode .btn.normal:hover,
+.dark-mode .tech-btn:hover {
+  background-color: #8b5d99;
+}
+
+.dark-mode .btn.normal {
+  background-color: #4c2c5a;
+  color: #f8f8f8;
+}
+
+.dark-mode .tecnologias-title,
+.dark-mode .sobre-mi-container h1,
+.dark-mode .tecnologias-nav a {
+  color: #eecdf3;
+}
+
+/* Contenedores */
+.home-container,
+.technologias-container,
+.sobre-mi-container {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: inherit;
+  min-height: 100vh;
+}
+
+/* Títulos */
+.tecnologias-title,
+.sobre-mi-container h1 {
+  font-size: 2rem;
+  color: #5a2c75;
+  margin-bottom: 1.5rem;
+}
+
+.tecnologias-nav a {
+  color: #8b5d99;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.tecnologias-nav a:hover {
+  color: #6c4b76;
+  text-decoration: underline;
+}
+
+/* Imagen de perfil */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #dca6df;
+  margin-bottom: 1rem;
+}
+
+/* Texto destacado */
+.cute-font {
+  font-family: 'Quicksand', sans-serif;
+  color: #8b5d99;
+}
+
+/* Botones */
+.btn.normal,
+.tech-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.4rem;
+  margin: 0.7rem 0.6rem;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Botón de modo claro/oscuro */
+.theme-toggle {
+  text-align: right;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.theme-button {
+  font-family: 'Quicksand', sans-serif;
+  padding: 0.4rem 1rem;
+  border: 1px solid #8b5d99;
+  background-color: transparent;
+  color: #8b5d99;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-button:hover {
+  background-color: #8b5d99;
+  color: white;
+}
+
+/* Distribución de botones */
+.spaced {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Tecnologías */
+.tecnologias-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  background-color: inherit;
+}
+
+.tech-card {
+  width: 130px;
+  height: 130px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: scale(1.1);
+}
+
+.tech-card img {
+  width: 70px;
+  height: auto;
+}
+
+/* Galería de imágenes */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0 2rem;
+  width: 100%;
+  background-color: inherit;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Links generales */
+nav a {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Estética final para tecnologías */
+.technologias-container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+  min-height: 100vh;
+}
+
+.tecnologias-title {
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
