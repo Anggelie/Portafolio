@@ -2,39 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/index.css';
 
-const tecnologias = [
-  {
-    nombre: 'HTML',
-    imagen: '/images/HTML.png',
-    descripcion: 'Aprendí a estructurar contenido web correctamente.'
-  },
-  {
-    nombre: 'CSS',
-    imagen: '/images/CSS.png',
-    descripcion: 'Sé diseñar con estilos modernos y responsivos.'
-  },
-  {
-    nombre: 'Python',
-    imagen: '/images/Phyton.png',
-    descripcion: 'Automatizo tareas y desarrollo scripts con fluidez.'
-  },
-  {
-    nombre: 'JavaScript',
-    imagen: '/images/JavaScript.png',
-    descripcion: 'Le doy interactividad a mis aplicaciones web.'
-  },
-  {
-    nombre: 'Kotlin',
-    imagen: '/images/kotlin.png',
-    descripcion: 'He creado apps móviles en Android con esta herramienta.'
-  },
-  {
-    nombre: 'PgAdmin',
-    imagen: '/images/PGADMIN.png',
-    descripcion: 'Gestiono bases de datos PostgreSQL de forma eficiente.'
-  }
-];
-
 const Tecnologias = () => {
   return (
     <div className="technologias-container">
@@ -43,15 +10,30 @@ const Tecnologias = () => {
       </nav>
       <h1 className="tecnologias-title">Tecnologías que he aprendido</h1>
       <div className="tecnologias-gallery">
-        {tecnologias.map((tec, index) => (
-          <div className="tech-card-wrapper" key={index}>
-            <div className="tech-card">
-              <img src={tec.imagen} alt={tec.nombre} />
-              <div className="tooltip">{tec.descripcion}</div>
+        {[
+          { src: '/images/HTML.png', alt: 'HTML', info: 'Estructura semántica web' },
+          { src: '/images/CSS.png', alt: 'CSS', info: 'Estilos modernos y responsivos' },
+          { src: '/images/Phyton.png', alt: 'Python', info: 'Automatización y scripts' },
+          { src: '/images/JavaScript.png', alt: 'JavaScript', info: 'Interactividad dinámica' },
+          { src: '/images/kotlin.png', alt: 'Kotlin', info: 'Desarrollo de apps Android' },
+          { src: '/images/PGADMIN.png', alt: 'PostgreSQL', info: 'Bases de datos relacionales' },
+        ].map((tech, i) => (
+          <div className="tech-card" key={i}>
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <img src={tech.src} alt={tech.alt} />
+              </div>
+              <div className="flip-card-back">
+                <p>{tech.info}</p>
+              </div>
             </div>
           </div>
         ))}
       </div>
+
+      <Link to="/proyectos" className="btn normal" style={{ marginTop: '3rem' }}>
+        Proyectos
+      </Link>
     </div>
   );
 };

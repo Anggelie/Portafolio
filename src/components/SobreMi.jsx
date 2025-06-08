@@ -21,14 +21,15 @@ const SobreMi = () => {
         <img src="/images/UVGEDIFICIO.png" alt="Edificio UVG" />
         <img src="/images/Amigos.png" alt="Amigos" />
         <img src="/images/guate.png" alt="Cuadro Guatemala" />
+        <img src="/images/Harito.png" alt="Harito" />
+        <img src="/images/comidita.png" alt="comidita" />
+        <img src="/images/Proto.png" alt="Prototipo" />
+        <img src="/images/clasebd.png" alt="bd" />
         <img src="/images/flores.png" alt="Flores" />
         <img src="/images/clase.png" alt="Clase UVG" />
-        <img src="/images/Proto.png" alt="Prototipo" />
-        <img src="/images/Harito.png" alt="Harito" />
         <img src="/images/amigosuni.png" alt="Jamigos" />
         <img src="/images/Banderas.png" alt="Banderas" />
-        <img src="/images/comidita.png" alt="comidita" />
-        <img src="/images/clasebd.png" alt="bd" />
+  
       </div>
     </div>
   );
