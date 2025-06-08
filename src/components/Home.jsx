@@ -10,9 +10,29 @@ const Home = ({ toggleTheme, darkMode }) => {
           {darkMode ? 'Modo Claro' : 'Modo Oscuro'}
         </button>
       </div>
-      <img src="/images/Anggelie.png" alt="Anggelie" className="profile-img" />
+
+      <div className="profile-popover-wrapper">
+        <img
+          src="/images/Anggelie.png"
+          alt="Anggelie"
+          className="profile-img"
+        />
+        <div className="profile-popover">
+          <p>
+            ¡Hola! Soy <strong>Anggelie</strong> <br /><br />
+            Nací un 2 de agosto y desde entonces no he dejado de explorar el mundo con curiosidad.  
+            Me apasiona capturar momentos con mi cámara  y convertir ideas en código. 
+            He trabajado con Banrural durante dos años, donde desarrollé habilidades de comunicación y trabajo en equipo . 
+            Ahora estoy en constante búsqueda de nuevos retos que me hagan crecer como ingeniera .
+          </p>
+        </div>
+      </div>
+
       <h1 className="cute-font">Anggelie Lizeth Velásquez Asencio</h1>
-      <p>Estudiante de la Universidad del Valle de Guatemala<br />Ingeniería en Ciencias de la Computación y TI</p>
+      <p>
+        Estudiante de la Universidad del Valle de Guatemala<br />
+        Ingeniería en Ciencias de la Computación y TI
+      </p>
 
       <div className="spaced">
         <a href="mailto:anggelie@uvg.edu.gt" className="btn normal">Enviar correo</a>
