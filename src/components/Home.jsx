@@ -5,6 +5,8 @@ import '../styles/index.css';
 const Home = ({ toggleTheme, darkMode }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
+  const pastelColors = ['#ffe3f0', '#fff3c2', '#c2f5ff', '#d9e8fc', '#e8d5ff'];
+
   return (
     <div className="home-container">
       <div className="theme-toggle">
@@ -13,27 +15,41 @@ const Home = ({ toggleTheme, darkMode }) => {
         </button>
       </div>
 
-      <div className="profile-popover-wrapper">
-  <img src="/images/Anggelie.png" alt="Anggelie" className="profile-img" />
-  <div className="profile-popover">
-    <p>
-      ¡Hola! Soy <strong>Anggelie</strong> <br /><br />
-      Nací un 2 de agosto y desde entonces no he dejado de explorar el mundo con curiosidad.  
-      Me apasiona capturar momentos con mi cámara y convertir ideas en código. 
-      He trabajado con Banrural durante dos años, donde desarrollé habilidades de comunicación y trabajo en equipo. 
-      Ahora estoy en constante búsqueda de nuevos retos que me hagan crecer como ingeniera.
-    </p>
-  </div>
-  {[...Array(15)].map((_, i) => (
-  <div key={i} className="star" style={{
-    top: `${Math.random() * 50 + 100}px`,
-    left: `${Math.random() * 180}px`,
-    animationDelay: `${Math.random() * 2}s`
-  }} />
-))}
+      <div
+        className="profile-popover-wrapper"
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
+        style={{ position: 'relative', width: '180px', height: '180px' }}
+      >
+        <img src="/images/Anggelie.png" alt="Anggelie" className="profile-img" />
 
-</div>
+        {showTooltip && (
+          <>
+            <div className="profile-popover">
+              <p>
+                ¡Hola! Soy <strong>Anggelie</strong><br /><br />
+                Nací un 2 de agosto y desde entonces no he dejado de explorar el mundo con curiosidad.
+                Me apasiona capturar momentos con mi cámara y convertir ideas en código.
+                He trabajado con Banrural durante dos años, donde desarrollé habilidades de comunicación y trabajo en equipo.
+                Ahora estoy en constante búsqueda de nuevos retos que me hagan crecer como ingeniera.
+              </p>
+            </div>
 
+            {[...Array(30)].map((_, i) => (
+              <div
+                key={i}
+                className="star"
+                style={{
+                  top: `${Math.random() * 180}px`,
+                  left: `${Math.random() * 180}px`,
+                  backgroundColor: pastelColors[Math.floor(Math.random() * pastelColors.length)],
+                  animationDelay: `${Math.random() * 2}s`
+                }}
+              />
+            ))}
+          </>
+        )}
+      </div>
 
       <h1 className="cute-font">Anggelie Lizeth Velásquez Asencio</h1>
       <p>
