@@ -2,6 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/index.css';
 
+// Importar todas las imágenes de tecnologías
+import HtmlImg from '/images/HTML.png';
+import CssImg from '/images/CSS.png';
+import PythonImg from '/images/Phyton.png';
+import JavaScriptImg from '/images/JavaScript.png';
+import KotlinImg from '/images/kotlin.png';
+import PostgresImg from '/images/PGADMIN.png';
+
 const Tecnologias = () => {
   return (
     <div className="technologias-container">
@@ -11,12 +19,12 @@ const Tecnologias = () => {
       <h1 className="tecnologias-title">Tecnologías que he aprendido</h1>
       <div className="tecnologias-gallery">
         {[
-          { src: '/images/HTML.png', alt: 'HTML', info: 'Estructura semántica web' },
-          { src: '/images/CSS.png', alt: 'CSS', info: 'Estilos modernos y responsivos' },
-          { src: '/images/Phyton.png', alt: 'Python', info: 'Automatización y scripts' },
-          { src: '/images/JavaScript.png', alt: 'JavaScript', info: 'Interactividad dinámica' },
-          { src: '/images/kotlin.png', alt: 'Kotlin', info: 'Desarrollo de apps Android' },
-          { src: '/images/PGADMIN.png', alt: 'PostgreSQL', info: 'Bases de datos relacionales' },
+          { src: HtmlImg, alt: 'HTML', info: 'Estructura semántica web' },
+          { src: CssImg, alt: 'CSS', info: 'Estilos modernos y responsivos' },
+          { src: PythonImg, alt: 'Python', info: 'Automatización y scripts' },
+          { src: JavaScriptImg, alt: 'JavaScript', info: 'Interactividad dinámica' },
+          { src: KotlinImg, alt: 'Kotlin', info: 'Desarrollo de apps Android' },
+          { src: PostgresImg, alt: 'PostgreSQL', info: 'Bases de datos relacionales' },
         ].map((tech, i) => (
           <div className="tech-card" key={i}>
             <div className="flip-card-inner">

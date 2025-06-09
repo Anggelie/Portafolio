@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
+import { HashRouter } from "react-router-dom"; // Cambia esta líneaimport App from "./App";
 import "./styles/index.css";
-
+import App from "./App";
+console.log("App uju component is rendering"); // Agrega esta línea
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter> {/* Cambia esta línea */}
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );

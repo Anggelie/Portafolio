@@ -2,6 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/index.css';
 
+// Importar todas las imágenes
+import RaicesImg from '/images/raices.png';
+import SqlImg from '/images/sql.png';
+import CalculadoraImg from '/images/calculadora.png';
+import FoundItImg from '/images/FoundIt.png';
+import DatabaseImg from '/images/database.png';
+import AppImg from '/images/app.png';
+import FrontImg from '/images/Front.png';
+
 const Proyectos = () => {
   return (
     <div className="proyectos-container">
@@ -12,37 +21,37 @@ const Proyectos = () => {
       <div className="proyectos-gallery">
         <a href="https://github.com/bar23354/Ra-ces-de-Vida" target="_blank" rel="noopener noreferrer">
           <div className="project-card">
-            <img src="/images/raices.png" alt="Raíces de Vida" />
+            <img src={RaicesImg} alt="Raíces de Vida" />
           </div>
         </a>
         <a href="https://github.com/Anggelie/Triggers.git" target="_blank" rel="noopener noreferrer">
           <div className="project-card">
-            <img src="/images/sql.png" alt="Triggers SQL" />
+            <img src={SqlImg} alt="Triggers SQL" />
           </div>
         </a>
         <a href="https://github.com/Anggelie/Proyecto1-Calculadora.git" target="_blank" rel="noopener noreferrer">
           <div className="project-card">
-            <img src="/images/calculadora.png" alt="Calculadora" />
+            <img src={CalculadoraImg} alt="Calculadora" />
           </div>
         </a>
         <a href="https://github.com/Anggelie/FoundIt" target="_blank" rel="noopener noreferrer">
           <div className="project-card">
-            <img src="/images/FoundIt.png" alt="FoundIt" />
+            <img src={FoundItImg} alt="FoundIt" />
           </div>
         </a>
         <a href="https://github.com/Anggelie/Proyecto-3-BD" target="_blank" rel="noopener noreferrer">
           <div className="project-card">
-            <img src="/images/database.png" alt="Database Proyecto 3" />
+            <img src={DatabaseImg} alt="Database Proyecto 3" />
           </div>
         </a>
         <a href="https://github.com/Anggelie/Lab07LazyState" target="_blank" rel="noopener noreferrer">
           <div className="project-card">
-            <img src="/images/app.png" alt="App Lazy State" />
+            <img src={AppImg} alt="App Lazy State" />
           </div>
         </a>
         <a href="https://github.com/Anggelie/Lab05FrontendBasic" target="_blank" rel="noopener noreferrer">
           <div className="project-card">
-            <img src="/images/Front.png" alt="Frontend Básico" />
+            <img src={FrontImg} alt="Frontend Básico" />
           </div>
         </a>
       </div>

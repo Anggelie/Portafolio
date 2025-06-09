@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/index.css';
+import AnggelieImg from '/images/Anggelie.png';
 
 const Home = ({ toggleTheme, darkMode }) => {
   const [showTooltip, setShowTooltip] = useState(false);
+  console.log("Home component is rendering"); 
 
   const pastelColors = ['#ffe3f0', '#fff3c2', '#c2f5ff', '#d9e8fc', '#e8d5ff'];
 
@@ -21,7 +23,7 @@ const Home = ({ toggleTheme, darkMode }) => {
         onMouseLeave={() => setShowTooltip(false)}
         style={{ position: 'relative', width: '180px', height: '180px' }}
       >
-        <img src="/images/Anggelie.png" alt="Anggelie" className="profile-img" />
+        <img src={AnggelieImg} alt="Anggelie" className="profile-img" />
 
         {showTooltip && (
           <>
